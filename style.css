@@ -4,19 +4,19 @@
 }
 
 body {
-    font-family: Arial, Helvetica, Calibri, sans-serif;
-    font-size: 15px;
     background: rgba(232, 232, 232, .2);
+    font-size: 15px;
+    font-family: Arial, Helvetica, Calibri, sans-serif;
 }
 
 .content {
-    width: 660px;
     margin: 30px auto 30px auto;
     padding-bottom: 45px;
-    border-left: 1px solid rgb(207, 207, 207);
+    width: 660px;
     border-right: 1px solid rgb(207, 207, 207);
-    box-shadow:  0px 4px 15px 1px rgba(0,0,0,0.4);
+    border-left: 1px solid rgb(207, 207, 207);
     background-image: url(lightpaperfibers.png);
+    box-shadow:  0px 4px 15px 1px rgba(0,0,0,0.4);
 }
     
     .section {
@@ -25,9 +25,9 @@ body {
 
 /* общая информация, контакты */
     .common-foto {
-        width: 175px;
         float: left;
         padding-left: 25px;
+        width: 175px;
     }
 
     .common-info {
@@ -41,8 +41,8 @@ body {
         }
 
         .common-contact {
-            list-style: none;
             padding-top: 10px;
+            list-style: none;
         }
 
         .common-contact-item {
@@ -56,23 +56,23 @@ body {
     }
 
         .tools-title {
-            text-align: left;
             padding-bottom: 7px;
+            text-align: left;
         }
         
         .tools-categoty {
             display: inline-block;
-            vertical-align: top;
             padding-left: 59px;
+            vertical-align: top;
         }
                 
             .sublist {
-                list-style: none;
                 padding-left: 30px;
+                list-style: none;
             }
             .sublist .tools-list-item:before {
-                content: '–';
                 padding-right: 7px;
+                content: '–';
             }
 
         .technologies {
@@ -85,14 +85,14 @@ body {
 
 /* дополнительно */
     .about {
-        padding-left: 30px;
         padding-right: 10px;
+        padding-left: 30px;
         line-height: 1.5;
     }
 
         .about-title {
-            text-align: left;
             padding: 0 0 7px 27px;
+            text-align: left;
         }
 
 /* образование */
@@ -102,8 +102,8 @@ body {
     }
 
         .education-title {
-            text-align: left;
             padding: 0 0 7px 37px;
+            text-align: left;
         }
 
         .education-list {
@@ -111,12 +111,12 @@ body {
         }
 
             .education-years {
+                display: inline-block;
                 padding-right: 20px;
                 width: 100px;
-                display: inline-block;
-                text-align: right;
-                vertical-align: top;
                 color: #8A8383;
+                vertical-align: top;
+                text-align: right;
             }
 
             .education-item {
@@ -128,33 +128,33 @@ body {
             }
 
             .education-item-text {
-                width: 496px;
                 display: inline-block;
+                width: 496px;
             }
 
 /* опыт работы */
     .experience-title {
-        text-align: left;
         padding: 0 0 7px 57px;
+        text-align: left;
     }
     
     .experience-scale {
-        list-style: none;
-        font-size: 13px;
+        margin-top: 45px;
+        margin-right: auto;
+        margin-left: auto;
         width: 550px;
         height: 4px;
         background: rgb(207, 207, 207);
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 45px;
+        list-style: none;
+        font-size: 13px;
     }
 
         .scale-item {
             display: inline-block;
             margin-top: -38px;
             margin-left: 64px;
-            vertical-align: top; /* для последнего элемента с годом*/
             width: 71px;
+            vertical-align: top; /* для последнего элемента с годом*/
         }
 
         .scale-item:first-child {
@@ -166,20 +166,20 @@ body {
         }
 
         .scale-item:before {
-            content: '';
+            position: relative;
+            top: 33px;
+            display: inline-block;
             width: 15px;
             height: 11px;
             border-radius: 5px;
             background: #364657;
             background: radial-gradient(circle farthest-corner at 0px -3px, rgb(207, 207, 207), #364657);
-            display: inline-block;
-            position: relative;
-            top: 33px;
+            content: '';
         }
         
             .scale-item-year {
-                padding-bottom: 20px;
                 margin-left: -7px;
+                padding-bottom: 20px;
             }
 
             .scale-item-position {
@@ -199,69 +199,73 @@ body {
                 }
 
     .experience-description {
-        border: 1px solid rgb(207, 207, 207);
-        margin: 70px auto 0;
-        width: 550px;
-        padding: 10px;
-        line-height: 1.5;
-        font-size: 14px;
         position: relative;
-        background: rgb(232, 232, 232);
         display: none;
+        margin: 70px auto 0;
+        padding: 10px;
+        width: 550px;
+        border: 1px solid rgb(207, 207, 207);
+        background: rgb(232, 232, 232);
+        text-indent: 30px;
+        font-size: 14px;
+        line-height: 1.5;
     }
+        .description-text {
+            margin-bottom: 7px;
+        }
     
     .current-description {
         display: block;
     }
 
     .year2012:before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        transform: rotate(45deg);
-        background: rgb(232, 232, 232);
-        border-top: 1px solid rgb(207, 207, 207);
-        border-left: 1px solid rgb(207, 207, 207);
         position: absolute;
         top: -6px;
         left: 75px;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgb(207, 207, 207);
+        border-left: 1px solid rgb(207, 207, 207);
+        background: rgb(232, 232, 232);
+        content: '';
+        transform: rotate(45deg);
     }
 
     .year2013:before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        transform: rotate(45deg);
-        background: rgb(232, 232, 232);
-        border-top: 1px solid rgb(207, 207, 207);
-        border-left: 1px solid rgb(207, 207, 207);
         position: absolute;
         top: -6px;
         left: 215px;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgb(207, 207, 207);
+        border-left: 1px solid rgb(207, 207, 207);
+        background: rgb(232, 232, 232);
+        content: '';
+        transform: rotate(45deg);
     }
     
     .year2014:before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        transform: rotate(45deg);
-        background: rgb(232, 232, 232);
-        border-top: 1px solid rgb(207, 207, 207);
-        border-left: 1px solid rgb(207, 207, 207);
         position: absolute;
         top: -6px;
         left: 350px;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgb(207, 207, 207);
+        border-left: 1px solid rgb(207, 207, 207);
+        background: rgb(232, 232, 232);
+        content: '';
+        transform: rotate(45deg);
     }
 
     .year2015:before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        transform: rotate(45deg);
-        background: rgb(232, 232, 232);
-        border-top: 1px solid rgb(207, 207, 207);
-        border-left: 1px solid rgb(207, 207, 207);
         position: absolute;
         top: -6px;
         left: 490px;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgb(207, 207, 207);
+        border-left: 1px solid rgb(207, 207, 207);
+        background: rgb(232, 232, 232);
+        content: '';
+        transform: rotate(45deg);
     }
