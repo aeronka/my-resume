@@ -1,0 +1,40 @@
+/* общая информация, контакты */
+.common-foto {
+    float: left;
+    padding-left: 25px;
+    width: 175px;
+}
+
+.common-info {
+    position: relative;
+    top: 10px;
+    left: 30px;
+
+    &-title {
+        padding-bottom: 7px;
+    }
+
+    &-contact {
+        padding-top: 10px;
+        list-style: none;
+
+        .contact-item {
+            padding: 4px 0;
+
+            .contact-link {
+                @mixin link;
+                text-decoration: none;
+            }
+        }
+    }
+}
+/* дополнительно */
+.about {
+    padding-right: 10px;
+    padding-left: 30px;
+    line-height: 1.5;
+
+    &-title {
+        @mixin title 27px;
+    }
+}

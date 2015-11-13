@@ -1,5 +1,10 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var postcssImport = require('postcss-import');
+var postcssSimpleVars = require('postcss-simple-vars');
+var postcssMixins = require('postcss-mixins');
+var postcssNested = require('postcss-nested');
+
 
 module.exports = {
     context: __dirname + '/frontend',
@@ -31,11 +36,22 @@ module.exports = {
             loader: 'babel'
         }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 5 versions')
+            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 5 versions!postcss')
         }, {
             test: /\.(png|jpg)$/,
             loader: 'file?name=[path][name].[ext]'
         }]
+    },
+
+    postcss: function (webpack) {
+        return [
+            postcssImport({
+                addDependencyTo: webpack
+            }),
+            postcssMixins,
+            postcssSimpleVars,
+            postcssNested
+        ];
     },
 
     plugins: [

@@ -1,0 +1,26 @@
+$commonGrey: rgb(207, 207, 207);
+$blue: #364657;
+
+@define-mixin title $leftOffset {
+    text-align: left;
+    padding: 0 0 7px $leftOffset;
+}
+
+@define-mixin link {
+    border-bottom: 1px dotted $blue;
+    cursor: pointer;
+    color: #000;
+}
+
+@define-mixin tail $tailOffset {
+    position: absolute;
+    top: -6px;
+    left: $tailOffset;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid $commonGrey;
+    border-left: 1px solid $commonGrey;
+    background: rgb(232, 232, 232);
+    content: '';
+    transform: rotate(45deg);
+}

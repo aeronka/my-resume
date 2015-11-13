@@ -17,6 +17,7 @@ export default class TimeLine {
     }
     
     onScaleClick(event) {
+        event.preventDefault();
         let target = event.target;
         if (target.matches('.item-position-name')) {
             this.selectScalePosition(target);

@@ -1,4 +1,4 @@
-import './style.css';
+import './css/style.css';
 import TimeLine from './timeLine.js';
 
 document.addEventListener('DOMContentLoaded', () => {
