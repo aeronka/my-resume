@@ -60,7 +60,8 @@
                 text-decoration: none;
                 
                 .item-position-name {
-                    @mixin link;
+                    @mixin link dotted;
+                    border-color: $blue;
                 }
 
                 .current-position {

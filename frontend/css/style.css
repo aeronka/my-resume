@@ -16,7 +16,7 @@ body {
     width: 660px;
     border-right: 1px solid $commonGrey;
     border-left: 1px solid $commonGrey;
-    background-image: url(../lightpaperfibers.png);
+    background-image: url(../img/lightpaperfibers.png);
     box-shadow:  0px 4px 15px 1px rgba(0,0,0,0.4);
 }
     

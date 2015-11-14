@@ -4,7 +4,7 @@ var postcssImport = require('postcss-import');
 var postcssSimpleVars = require('postcss-simple-vars');
 var postcssMixins = require('postcss-mixins');
 var postcssNested = require('postcss-nested');
-
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     context: __dirname + '/frontend',
@@ -36,10 +36,18 @@ module.exports = {
             loader: 'babel'
         }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 5 versions!postcss')
+            loader: ExtractTextPlugin.extract('style', 'css!postcss')
         }, {
-            test: /\.(png|jpg)$/,
-            loader: 'file?name=[path][name].[ext]'
+            test: /\.html$/,
+            loaders: [
+                'file?name=[path][name].[ext]'
+            ]
+        }, {
+            test: /\.(png|jpg|svg|ico)$/,
+            loaders: [
+                'file?name=[path][name].[ext]',
+                'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            ]
         }]
     },
 
@@ -50,7 +58,8 @@ module.exports = {
             }),
             postcssMixins,
             postcssSimpleVars,
-            postcssNested
+            postcssNested,
+            autoprefixer({ browsers: ['last 5 versions'] })
         ];
     },
 

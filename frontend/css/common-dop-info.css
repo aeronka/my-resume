@@ -17,13 +17,44 @@
     &-contact {
         padding-top: 10px;
         list-style: none;
+        position: relative;
+        left: 24px;
 
         .contact-item {
             padding: 4px 0;
 
             .contact-link {
-                @mixin link;
+                @mixin link solid;
+                border-color: #A09B9B;
                 text-decoration: none;
+                position: relative;
+
+                &:hover {
+                    color: #475C73;
+                    border-color: #475C73;
+                }
+            }
+            
+            .phone {
+                border: none;
+                text-decoration: none;
+                color: #000;
+                
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            .phone:before {
+                @mixin icon ../img/phone.svg;
+            }
+
+            .mail:before {
+                @mixin icon ../img/mail.svg;
+            }
+
+            .github:before {
+                @mixin icon ../img/github.svg;
             }
         }
     }

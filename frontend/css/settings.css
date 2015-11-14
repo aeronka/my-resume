@@ -6,10 +6,21 @@ $blue: #364657;
     padding: 0 0 7px $leftOffset;
 }
 
-@define-mixin link {
-    border-bottom: 1px dotted $blue;
+@define-mixin link $linkType {
+    border-bottom: 1px $linkType;
     cursor: pointer;
     color: #000;
+}
+
+@define-mixin icon $iconUrl {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -23px;
+    top: 2px;
+    background: url($iconUrl) no-repeat;
+    background-size: contain;
 }
 
 @define-mixin tail $tailOffset {
